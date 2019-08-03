@@ -1,4 +1,4 @@
-package com.bookexchange;
+package com.bookexchange.model;
 
 import java.time.LocalDateTime;
 
@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Item {
 
 	@Autowired
-	private Book theBook;
+	private Book book;
 
 	@Autowired
 	private User user;
@@ -16,12 +16,12 @@ public class Item {
 	private LocalDateTime createdDate;
 	private LocalDateTime lastUpdatedTime;
 
-	public Book getTheBook() {
-		return theBook;
+	public Book getbook() {
+		return book;
 	}
 
-	public void setTheBook(Book theBook) {
-		this.theBook = theBook;
+	public void setbook(Book theBook) {
+		this.book = theBook;
 	}
 
 	public User getUser() {

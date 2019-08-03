@@ -1,10 +1,10 @@
-package com.bookexchange;
+package com.bookexchange.model;
 
 public class Book {
 
 	private String name;
 	private String ISBN;
-	private String price;
+	private double price;
 	private String author;
 
 	public Book() {
@@ -27,11 +27,11 @@ public class Book {
 		ISBN = iSBN;
 	}
 
-	public String getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 

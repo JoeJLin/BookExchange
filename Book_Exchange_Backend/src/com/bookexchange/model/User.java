@@ -1,4 +1,4 @@
-package com.bookexchange;
+package com.bookexchange.model;
 
 public class User {
 
