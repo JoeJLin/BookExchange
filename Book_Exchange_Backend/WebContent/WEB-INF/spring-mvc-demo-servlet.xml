@@ -32,7 +32,7 @@
 	</bean>
 	
 	<!-- Adding html, css, js -->
-	<mvc:resources mapping="/resources/**" location="WebContent/resources/"></mvc:resources>
+	<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
 </beans>
 
 
