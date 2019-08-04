@@ -1,22 +1,27 @@
 package com.bookexchange.model;
 
+import java.text.DecimalFormat;
+
 public class Book {
 
-	private String name;
+	private String bookName;
 	private String ISBN;
 	private double price;
 	private String author;
 
-	public Book() {
-
+	public Book(String bookName, String ISBN, String author, double price) {
+		this.setBookName(bookName);
+		this.setISBN(ISBN);
+		this.setPrice(price);
+		this.setAuthor(author);
 	}
 
-	public String getName() {
-		return name;
+	public String getBookName() {
+		return this.bookName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setBookName(String name) {
+		this.bookName = name;
 	}
 
 	public String getISBN() {
