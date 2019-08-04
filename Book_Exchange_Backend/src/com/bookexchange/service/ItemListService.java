@@ -24,7 +24,7 @@ public class ItemListService {
 			throw new Exception("The list is empty.");
 		} else {
 			for(Map.Entry<String, Item> entry : itemList.entrySet()) {
-				System.out.println(entry.getKey() + "\t\t" + entry.getValue().getbook().getName());
+				System.out.println(entry.getKey() + "\t\t" + entry.getValue().getbook().getBookName());
 			}
 		}
 	}
