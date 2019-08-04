@@ -30,6 +30,9 @@
 		class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames" value="resources/messages" />
 	</bean>
+	
+	<!-- Adding html, css, js -->
+	<mvc:resources mapping="/resources/**" location="WebContent/resources/"></mvc:resources>
 </beans>
 
 
