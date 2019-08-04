@@ -25,7 +25,7 @@
 		<!-- call student.getOperatingSystems() and loop through it -->
 		<c:forEach var="temp" items="${inventory.bookList}">
 		
-			<li> ${temp.key}${" ISBN: "}${temp.value} </li>
+			<li> ${temp.key}${" ISBN: "}${ temp.value } </li>
 			
 		</c:forEach>
 			
