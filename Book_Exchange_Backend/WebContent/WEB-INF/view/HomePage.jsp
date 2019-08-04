@@ -27,8 +27,8 @@
 		<!-- call student.getOperatingSystems() and loop through it -->
 		<c:forEach var="temp" items="${inventory.bookList}">
 		
-			<li> ${"Book Name Is: "}${fn:toUpperCase(temp.bookName)}${" ISBN: "}${temp.ISBN} </li>
-			<%-- <li>${temp}</li> --%>
+		
+			<li> <img src="${pageContext.request.contextPath}/resources/images/${temp.ISBN}.jpg" />${" ISBN: "}${temp.ISBN} </li>
 			
 		</c:forEach>
 			
