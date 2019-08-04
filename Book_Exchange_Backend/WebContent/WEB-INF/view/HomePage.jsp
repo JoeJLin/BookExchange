@@ -1,4 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!-- below is imported to convert text to uppercase -->
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -25,7 +27,8 @@
 		<!-- call student.getOperatingSystems() and loop through it -->
 		<c:forEach var="temp" items="${inventory.bookList}">
 		
-			<li> ${temp.key}${" ISBN: "}${ temp.value } </li>
+		
+			<li> <img src="${pageContext.request.contextPath}/resources/images/${temp.ISBN}.jpg" />${" ISBN: "}${temp.ISBN} </li>
 			
 		</c:forEach>
 			
