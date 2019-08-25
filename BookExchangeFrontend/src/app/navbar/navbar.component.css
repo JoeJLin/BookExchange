@@ -1,0 +1,21 @@
+.search-input {
+  margin-right: 0 !important;
+}
+
+.theme-color {
+  color: #346250;
+}
+
+.button-color {
+  background-color: #346250;
+  color: white;
+}
+
+.category-navbar {
+  margin: 10px auto;
+}
+
+.hover-btn:hover {
+  background-color: #346250;
+  color: white;
+}

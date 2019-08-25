@@ -1,14 +1,19 @@
 package com.bookexchange.tester;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import com.bookexchange.model.Book;
 import com.bookexchange.model.Item;
 import com.bookexchange.model.User;
 import com.bookexchange.service.ItemListService;
 
+@SpringBootApplication
 public class Tester {
 
 	public static void main(String[] args) {
 
+		SpringApplication.run(Tester.class, args);
 //		User user = new User();
 //		user.setId("1234");
 //		user.setName("Joe Lin");
