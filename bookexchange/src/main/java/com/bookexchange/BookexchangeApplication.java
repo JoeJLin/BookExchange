@@ -1,4 +1,4 @@
-package com.bookexchange.bookexchange;
+package com.bookexchange;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

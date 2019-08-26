@@ -3,6 +3,7 @@ package com.bookexchange.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import org.hibernate.Session;
@@ -15,36 +16,30 @@ import org.springframework.stereotype.Repository;
 import com.bookexchange.entity.BookEntity;
 import com.bookexchange.model.Book;
 
-
 @Repository
 @Component
-public class BooksDAOImpl implements BooksDAO{
+public class BooksDAOImpl implements BooksDAO {
 
 	@Autowired
-	 @Qualifier("sessionFactory")
-	private SessionFactory sessionFactory;
+	private EntityManager entityManager;
 
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
-	
 	@Override
 	public List<Book> getAllBooks() throws Exception {
-		 Session session = sessionFactory.openSession();
-	        Query query = (Query) session.createQuery("from Book");
-	        List<BookEntity> rst = query.getResultList();
-	        session.close();
-	        List<Book> bookList = new ArrayList<Book>();
-	        for(BookEntity be : rst) {
-	        	Book book = new Book();
-	        	book.setAuthor(be.getAuthor());
-	        	book.setBookId(be.getBookId());
-	        	book.setBookName(be.getBookName());
-	        	book.setISBN(be.getISBN());
-	        	book.setPrice(be.getPrice());
-	        }
-	        
-	        return bookList;
+		Query query = entityManager.createQuery("select be from BookEntity be");
+		List<BookEntity> rst = query.getResultList();
+		List<Book> bookList = new ArrayList<Book>();
+		for (BookEntity be : rst) {
+			System.out.println(be);
+			Book book = new Book();
+			book.setAuthor(be.getAuthor());
+			book.setBookId(be.getBookId());
+			book.setBookName(be.getBookName());
+			book.setISBN(be.getISBN());
+			book.setPrice(be.getPrice());
+			bookList.add(book);
+		}
+
+		return bookList;
 	}
 
 	@Override
@@ -64,5 +59,5 @@ public class BooksDAOImpl implements BooksDAO{
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 }

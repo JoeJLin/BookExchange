@@ -14,4 +14,4 @@ CREATE TABLE `Book` (
 
 ALTER table `Book` AUTO_INCREMENT = 1;
 
-insert into Book VALUES(1, "abc", 10, "joe", "Java");
+insert into Book VALUES(1, "abc", "joe", "Java", 10);

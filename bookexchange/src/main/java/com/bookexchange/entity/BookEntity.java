@@ -2,6 +2,8 @@ package com.bookexchange.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,12 +11,14 @@ import javax.persistence.Table;
 @Table(name = "Book")
 public class BookEntity {
 	@Id
-	@Column(name = "bookId")
+	@Column(name = "book_id")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer bookId;
+	@Column(name = "isbn")
 	private String ISBN;
 	private Double price;
 	private String author;
-	@Column(name = "bookName")
+	@Column(name = "book_name")
 	private String bookName;
 	
 	public String getBookName() {
